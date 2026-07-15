@@ -1,11 +1,5 @@
 @import "tailwindcss";
 
-/* include utility classes in streamdown */
-@source '../node_modules/streamdown/dist/index.js';
-
-/* Add KaTeX CSS for math rendering */
-@import 'katex/dist/katex.min.css';
-
 /* custom variant for setting dark mode programmatically */
 @custom-variant dark (&:is(.dark, .dark *));
 
@@ -13,92 +7,90 @@
 @plugin "tailwindcss-animate";
 @plugin "@tailwindcss/typography";
 
-/* define design tokens (light mode) */
+/* IA Lucrativa — design tokens (light mode) */
 :root {
-  --background: hsl(0 0% 100%);
-  --foreground: hsl(240 10% 3.9%);
-  --card: hsl(0 0% 100%);
-  --card-foreground: hsl(240 10% 3.9%);
-  --popover: hsl(0 0% 100%);
-  --popover-foreground: hsl(240 10% 3.9%);
-  --primary: hsl(240 5.9% 10%);
-  --primary-foreground: hsl(0 0% 98%);
-  --secondary: hsl(240 4.8% 95.9%);
-  --secondary-foreground: hsl(240 5.9% 10%);
-  --muted: hsl(240 4.8% 95.9%);
-  --muted-foreground: hsl(240 3.8% 46.1%);
-  --accent: hsl(240 4.8% 95.9%);
-  --accent-foreground: hsl(240 5.9% 10%);
-  --destructive: hsl(0 84.2% 60.2%);
-  --destructive-foreground: hsl(0 0% 98%);
-  --border: hsl(240 5.9% 90%);
-  --input: hsl(240 5.9% 90%);
-  --ring: hsl(240 10% 3.9%);
-  --chart-1: hsl(12 76% 61%);
-  --chart-2: hsl(173 58% 39%);
-  --chart-3: hsl(197 37% 24%);
-  --chart-4: hsl(43 74% 66%);
-  --chart-5: hsl(27 87% 67%);
-  --sidebar-background: hsl(0 0% 98%);
-  --sidebar-foreground: hsl(240 5.3% 26.1%);
-  --sidebar-primary: hsl(240 5.9% 10%);
-  --sidebar-primary-foreground: hsl(0 0% 98%);
-  --sidebar-accent: hsl(240 4.8% 95.9%);
-  --sidebar-accent-foreground: hsl(240 5.9% 10%);
-  --sidebar-border: hsl(220 13% 91%);
-  --sidebar-ring: hsl(217.2 91.2% 59.8%);
-  /* border radius unit */
-  --radius: 0.5rem;
-  --sidebar: hsl(0 0% 98%);
+  --background: #f8f9fc;
+  --foreground: #111527;
+  --card: #ffffff;
+  --card-foreground: #111527;
+  --popover: #ffffff;
+  --popover-foreground: #111527;
+  --primary: #5759e8;
+  --primary-foreground: #f8f9fc;
+  --secondary: #e7eaf2;
+  --secondary-foreground: #111527;
+  --muted: #e7eaf2;
+  --muted-foreground: #667085;
+  --accent: #20c6a7;
+  --accent-foreground: #111527;
+  --destructive: hsl(0 72% 51%);
+  --destructive-foreground: #f8f9fc;
+  --border: #e7eaf2;
+  --input: #e7eaf2;
+  --ring: #5759e8;
+
+  /* brand palette, available as utilities (bg-brand-indigo, text-brand-turquoise, ...) */
+  --brand-navy: #111527;
+  --brand-indigo: #5759e8;
+  --brand-turquoise: #20c6a7;
+  --brand-white: #f8f9fc;
+  --brand-gray-light: #e7eaf2;
+  --brand-gray-text: #667085;
+  --brand-lavender: #a9a8ff;
+
+  --radius: 1.125rem;
+
+  --sidebar: #ffffff;
+  --sidebar-foreground: #111527;
+  --sidebar-primary: #5759e8;
+  --sidebar-primary-foreground: #f8f9fc;
+  --sidebar-accent: #e7eaf2;
+  --sidebar-accent-foreground: #111527;
+  --sidebar-border: #e7eaf2;
+  --sidebar-ring: #5759e8;
 }
 
-/* define design tokens (dark mode) */
+/* IA Lucrativa — design tokens (dark mode) */
 .dark {
-  --background: hsl(240 10% 3.9%);
-  --foreground: hsl(0 0% 98%);
-  --card: hsl(240 10% 3.9%);
-  --card-foreground: hsl(0 0% 98%);
-  --popover: hsl(240 10% 3.9%);
-  --popover-foreground: hsl(0 0% 98%);
-  --primary: hsl(0 0% 98%);
-  --primary-foreground: hsl(240 5.9% 10%);
-  --secondary: hsl(240 3.7% 15.9%);
-  --secondary-foreground: hsl(0 0% 98%);
-  --muted: hsl(240 3.7% 15.9%);
-  --muted-foreground: hsl(240 5% 64.9%);
-  --accent: hsl(240 3.7% 15.9%);
-  --accent-foreground: hsl(0 0% 98%);
-  --destructive: hsl(0 62.8% 30.6%);
-  --destructive-foreground: hsl(0 0% 98%);
-  --border: hsl(240 3.7% 15.9%);
-  --input: hsl(240 3.7% 15.9%);
-  --ring: hsl(240 4.9% 83.9%);
-  --chart-1: hsl(220 70% 50%);
-  --chart-2: hsl(160 60% 45%);
-  --chart-3: hsl(30 80% 55%);
-  --chart-4: hsl(280 65% 60%);
-  --chart-5: hsl(340 75% 55%);
-  --sidebar-background: hsl(240 5.9% 10%);
-  --sidebar-foreground: hsl(240 4.8% 95.9%);
-  --sidebar-primary: hsl(224.3 76.3% 48%);
-  --sidebar-primary-foreground: hsl(0 0% 100%);
-  --sidebar-accent: hsl(240 3.7% 15.9%);
-  --sidebar-accent-foreground: hsl(240 4.8% 95.9%);
-  --sidebar-border: hsl(240 3.7% 15.9%);
-  --sidebar-ring: hsl(217.2 91.2% 59.8%);
-  --sidebar: hsl(240 5.9% 10%);
+  --background: #111527;
+  --foreground: #f8f9fc;
+  --card: #171b30;
+  --card-foreground: #f8f9fc;
+  --popover: #171b30;
+  --popover-foreground: #f8f9fc;
+  --primary: #6f71ee;
+  --primary-foreground: #f8f9fc;
+  --secondary: #1c2138;
+  --secondary-foreground: #f8f9fc;
+  --muted: #1c2138;
+  --muted-foreground: #9298b3;
+  --accent: #20c6a7;
+  --accent-foreground: #111527;
+  --destructive: hsl(0 70% 55%);
+  --destructive-foreground: #f8f9fc;
+  --border: #262c47;
+  --input: #262c47;
+  --ring: #a9a8ff;
+
+  --sidebar: #171b30;
+  --sidebar-foreground: #f8f9fc;
+  --sidebar-primary: #6f71ee;
+  --sidebar-primary-foreground: #f8f9fc;
+  --sidebar-accent: #1c2138;
+  --sidebar-accent-foreground: #f8f9fc;
+  --sidebar-border: #262c47;
+  --sidebar-ring: #a9a8ff;
 }
 
 /* define theme */
 @theme {
-  --font-sans: var(--font-geist);
-  --font-mono: var(--font-geist-mono);
-
-  --breakpoint-toast-mobile: 600px;
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-manrope);
 
   --radius-lg: var(--radius);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 4px);
+  --radius-sm: calc(var(--radius) - 8px);
+  --radius-xl: calc(var(--radius) + 6px);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -128,13 +120,15 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-indigo: var(--brand-indigo);
+  --color-brand-turquoise: var(--brand-turquoise);
+  --color-brand-white: var(--brand-white);
+  --color-brand-gray-light: var(--brand-gray-light);
+  --color-brand-gray-text: var(--brand-gray-text);
+  --color-brand-lavender: var(--brand-lavender);
 
-  --color-sidebar: var(--sidebar-background);
+  --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
   --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
@@ -145,12 +139,8 @@
 }
 
 /*
-  The default border color has changed to `currentcolor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
+  Tailwind v4 default border color is currentcolor; keep the v3-like default
+  so components that don't set an explicit border color still look right.
 */
 @layer base {
   *,
@@ -158,7 +148,7 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
+    border-color: var(--color-border, currentcolor);
   }
 }
 
@@ -166,47 +156,46 @@
   text-wrap: balance;
 }
 
-@utility -webkit-overflow-scrolling-touch {
-  -webkit-overflow-scrolling: touch;
+@utility gradient-brand {
+  background-image: linear-gradient(
+    90deg,
+    var(--brand-indigo) 0%,
+    var(--brand-turquoise) 100%
+  );
 }
 
-@utility touch-pan-y {
-  touch-action: pan-y;
-}
-
-@utility overscroll-behavior-contain {
-  overscroll-behavior: contain;
-}
-
-@layer utilities {
-  :root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --foreground-rgb: 255, 255, 255;
-      --background-start-rgb: 0, 0, 0;
-      --background-end-rgb: 0, 0, 0;
-    }
-  }
+@utility gradient-brand-text {
+  background-image: linear-gradient(
+    90deg,
+    var(--brand-indigo) 0%,
+    var(--brand-turquoise) 100%
+  );
+  background-clip: text;
+  color: transparent;
 }
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border outline-ring/50;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
     overflow-x: hidden;
     position: relative;
   }
 
   html {
     overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
   }
 }
 
@@ -229,46 +218,6 @@
   }
 }
 
-.ProseMirror {
-  outline: none;
-}
-
-.cm-editor,
-.cm-gutters {
-  @apply bg-background! dark:bg-zinc-800! outline-hidden! selection:bg-zinc-900!;
-}
-
-.ͼo.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground,
-.ͼo.cm-selectionBackground,
-.ͼo.cm-content::selection {
-  @apply bg-zinc-200! dark:bg-zinc-900!;
-}
-
-.cm-activeLine,
-.cm-activeLineGutter {
-  @apply bg-transparent!;
-}
-
-.cm-activeLine {
-  @apply rounded-r-sm!;
-}
-
-.cm-lineNumbers {
-  @apply min-w-7;
-}
-
-.cm-foldGutter {
-  @apply min-w-3;
-}
-
-.cm-lineNumbers .cm-activeLineGutter {
-  @apply rounded-l-sm!;
-}
-
-.suggestion-highlight {
-  @apply bg-blue-200 hover:bg-blue-300 dark:hover:bg-blue-400/50 dark:text-blue-50 dark:bg-blue-500/40;
-}
-
 /* minimal scrollbar styling */
 ::-webkit-scrollbar {
   width: 6px;
@@ -286,7 +235,8 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: --alpha(var(--muted-foreground) / 0.5);
+  background: var(--muted-foreground);
+  opacity: 0.5;
 }
 
 ::-webkit-scrollbar-corner {
@@ -297,24 +247,4 @@
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--border) transparent;
-}
-
-@theme inline {
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
-}
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
 }
