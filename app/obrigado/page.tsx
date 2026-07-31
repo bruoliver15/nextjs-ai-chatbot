@@ -19,7 +19,7 @@ export default function ObrigadoPage() {
       className={`${playfair.variable} min-h-screen bg-[#0d1b1e] text-[#f5efe4]`}
     >
       <div className="relative overflow-hidden">
-        <div className="-translate-x-1/2 pointer-events-none absolute top-[-10rem] left-1/2 h-[28rem] w-[28rem] rounded-full bg-[#c9a24b]/10 blur-3xl" />
+        <div className="-translate-x-1/2 pointer-events-none absolute top-[-10rem] left-1/2 h-[28rem] w-[28rem] rounded-full bg-[#2dd4bf]/10 blur-3xl" />
         <div className="pointer-events-none absolute right-[-8rem] bottom-[-8rem] h-[24rem] w-[24rem] rounded-full bg-[#1f8a8c]/15 blur-3xl" />
 
         <main className="relative mx-auto flex max-w-3xl flex-col items-center px-6 py-16 text-center sm:py-20">
@@ -31,7 +31,7 @@ export default function ObrigadoPage() {
             className={`${playfair.className} mt-6 text-balance font-semibold text-3xl leading-tight sm:text-4xl`}
           >
             Parabéns! Sua vaga no{" "}
-            <span className="text-[#e2bd6f]">Ciclo de Viagens Infinitas</span>{" "}
+            <span className="text-[#2dd4bf]">Ciclo de Viagens Infinitas</span>{" "}
             está garantida
           </h1>
 
@@ -41,12 +41,12 @@ export default function ObrigadoPage() {
           </p>
 
           {/* Aviso principal: e-mail e spam */}
-          <div className="mt-10 w-full rounded-2xl border-2 border-[#e2bd6f] bg-[#16292c] p-6 text-left shadow-[0_0_40px_rgba(226,189,111,0.08)] sm:p-8">
+          <div className="mt-10 w-full rounded-2xl border-2 border-[#2dd4bf] bg-[#16292c] p-6 text-left shadow-[0_0_40px_rgba(45,212,191,0.12)] sm:p-8">
             <div className="flex items-start gap-4">
               <span className="text-3xl">📩</span>
               <div>
                 <h2
-                  className={`${playfair.className} font-semibold text-[#e2bd6f] text-xl sm:text-2xl`}
+                  className={`${playfair.className} font-semibold text-[#2dd4bf] text-xl sm:text-2xl`}
                 >
                   Olhe seu e-mail agora — inclusive o SPAM
                 </h2>
@@ -66,9 +66,9 @@ export default function ObrigadoPage() {
               </div>
             </div>
 
-            <ol className="mt-6 space-y-4 border-[#e2bd6f]/30 border-t pt-6">
+            <ol className="mt-6 space-y-4 border-[#2dd4bf]/30 border-t pt-6">
               <li className="flex gap-3">
-                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#e2bd6f] font-semibold text-[#0d1b1e] text-sm">
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#2dd4bf] font-semibold text-[#0d1b1e] text-sm">
                   1
                 </span>
                 <span className="text-[#e7e1d3]">
@@ -76,7 +76,7 @@ export default function ObrigadoPage() {
                 </span>
               </li>
               <li className="flex gap-3">
-                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#e2bd6f] font-semibold text-[#0d1b1e] text-sm">
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#2dd4bf] font-semibold text-[#0d1b1e] text-sm">
                   2
                 </span>
                 <span className="text-[#e7e1d3]">
@@ -88,7 +88,7 @@ export default function ObrigadoPage() {
                 </span>
               </li>
               <li className="flex gap-3">
-                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#e2bd6f] font-semibold text-[#0d1b1e] text-sm">
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#2dd4bf] font-semibold text-[#0d1b1e] text-sm">
                   3
                 </span>
                 <span className="text-[#e7e1d3]">
@@ -106,7 +106,7 @@ export default function ObrigadoPage() {
           </p>
 
           <p
-            className={`${playfair.className} mt-14 text-[#e2bd6f] text-lg italic`}
+            className={`${playfair.className} mt-14 text-[#2dd4bf] text-lg italic`}
           >
             Obrigado por confiar no Ciclo de Viagens Infinitas.
           </p>
