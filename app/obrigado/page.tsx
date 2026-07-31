@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { Playfair_Display } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "Compra confirmada | Plano Viagens Vitalícias com Milhas",
+  title: "Compra confirmada | Ciclo de Viagens Infinitas",
   description:
-    "Sua compra foi confirmada. Verifique seu e-mail (e o spam) para acessar o Plano Viagens Vitalícias com Milhas.",
+    "Sua compra foi confirmada. Verifique seu e-mail (e o spam) para acessar o Ciclo de Viagens Infinitas.",
 };
 
 const playfair = Playfair_Display({
@@ -31,9 +31,7 @@ export default function ObrigadoPage() {
             className={`${playfair.className} mt-6 text-balance font-semibold text-3xl leading-tight sm:text-4xl`}
           >
             Parabéns! Sua vaga no{" "}
-            <span className="text-[#e2bd6f]">
-              Plano Viagens Vitalícias com Milhas
-            </span>{" "}
+            <span className="text-[#e2bd6f]">Ciclo de Viagens Infinitas</span>{" "}
             está garantida
           </h1>
 
@@ -56,7 +54,7 @@ export default function ObrigadoPage() {
                   Neste exato momento estamos enviando para o seu e-mail de
                   cadastro os{" "}
                   <strong className="text-[#f5efe4]">
-                    links de acesso ao Plano Viagens Vitalícias
+                    links de acesso ao Ciclo de Viagens Infinitas
                   </strong>
                   . Esse e-mail pode levar alguns minutos para chegar e, com
                   frequência, cai direto na caixa de{" "}
@@ -110,7 +108,7 @@ export default function ObrigadoPage() {
           <p
             className={`${playfair.className} mt-14 text-[#e2bd6f] text-lg italic`}
           >
-            Obrigado por confiar no Plano Viagens Vitalícias com Milhas.
+            Obrigado por confiar no Ciclo de Viagens Infinitas.
           </p>
           <p className="mt-2 text-[#7c7666] text-xs">
             Sua próxima viagem começa nesse e-mail.
