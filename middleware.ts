@@ -53,9 +53,8 @@ export const config = {
      * - _next/static (static files)
      * - _next/image (image optimization files)
      * - favicon.ico, sitemap.xml, robots.txt (metadata files)
-     * - images (public static assets)
      * - obrigado (public post-purchase thank-you page, no auth required)
      */
-    "/((?!_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|images|obrigado).*)",
+    "/((?!_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|obrigado).*)",
   ],
 };

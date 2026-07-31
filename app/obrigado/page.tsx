@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Playfair_Display } from "next/font/google";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Compra confirmada | Plano Viagens Vitalícias com Milhas",
@@ -24,16 +23,7 @@ export default function ObrigadoPage() {
         <div className="pointer-events-none absolute right-[-8rem] bottom-[-8rem] h-[24rem] w-[24rem] rounded-full bg-[#1f8a8c]/15 blur-3xl" />
 
         <main className="relative mx-auto flex max-w-3xl flex-col items-center px-6 py-16 text-center sm:py-20">
-          <Image
-            alt="Plano Viagens Vitalícias com Milhas"
-            className="h-auto w-40 sm:w-48"
-            height={941}
-            priority
-            src="/images/obrigado/selo-viagens-vitalicias.png"
-            width={1672}
-          />
-
-          <p className="mt-8 inline-flex items-center gap-2 rounded-full border border-[#1f8a8c]/40 bg-[#1f8a8c]/10 px-4 py-1.5 font-medium text-[#7fd4d6] text-sm tracking-wide">
+          <p className="inline-flex items-center gap-2 rounded-full border border-[#1f8a8c]/40 bg-[#1f8a8c]/10 px-4 py-1.5 font-medium text-[#7fd4d6] text-sm tracking-wide">
             ✓ Compra aprovada com sucesso
           </p>
 
@@ -116,28 +106,6 @@ export default function ObrigadoPage() {
             o endereço digitado na compra está correto antes de tentar
             novamente.
           </p>
-
-          {/* Imagens de identidade visual do evento */}
-          <div className="mt-14 grid w-full grid-cols-2 gap-4 sm:gap-6">
-            <div className="relative aspect-[3/4] overflow-hidden rounded-xl border border-[#e2bd6f]/30">
-              <Image
-                alt="Viajante em frente à Torre Eiffel, Paris"
-                className="object-cover"
-                fill
-                sizes="(max-width: 640px) 45vw, 320px"
-                src="/images/obrigado/paris.jpeg"
-              />
-            </div>
-            <div className="relative aspect-[3/4] overflow-hidden rounded-xl border border-[#e2bd6f]/30">
-              <Image
-                alt="Viajante em frente à Grande Mesquita Sheikh Zayed"
-                className="object-cover"
-                fill
-                sizes="(max-width: 640px) 45vw, 320px"
-                src="/images/obrigado/mesquita.jpeg"
-              />
-            </div>
-          </div>
 
           <p
             className={`${playfair.className} mt-14 text-[#e2bd6f] text-lg italic`}
