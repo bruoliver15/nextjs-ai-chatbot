@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { Playfair_Display } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "Compra confirmada | Ciclo de Viagens Infinitas",
+  title: "Inscrição confirmada | Ciclo das Viagens Infinitas",
   description:
-    "Sua compra foi confirmada. Verifique seu e-mail (e o spam) para acessar o Ciclo de Viagens Infinitas.",
+    "Sua inscrição foi confirmada. Verifique seu e-mail (e o spam) para acessar o Ciclo das Viagens Infinitas.",
 };
 
 const playfair = Playfair_Display({
@@ -23,96 +23,106 @@ export default function ObrigadoPage() {
         <div className="pointer-events-none absolute right-[-8rem] bottom-[-8rem] h-[24rem] w-[24rem] rounded-full bg-[#1f8a8c]/15 blur-3xl" />
 
         <main className="relative mx-auto flex max-w-3xl flex-col items-center px-6 py-16 text-center sm:py-20">
-          <p className="inline-flex items-center gap-2 rounded-full border border-[#1f8a8c]/40 bg-[#1f8a8c]/10 px-4 py-1.5 font-medium text-[#7fd4d6] text-sm tracking-wide">
-            ✓ Compra aprovada com sucesso
-          </p>
-
           <h1
-            className={`${playfair.className} mt-6 text-balance font-semibold text-3xl leading-tight sm:text-4xl`}
+            className={`${playfair.className} text-balance font-semibold text-3xl leading-tight sm:text-4xl`}
           >
-            Parabéns! Sua vaga no{" "}
-            <span className="text-[#2dd4bf]">Ciclo de Viagens Infinitas</span>{" "}
-            está garantida
+            🎉 Parabéns! Sua inscrição foi confirmada.
           </h1>
 
           <p className="mt-4 max-w-xl text-[#cfc7b5] text-base sm:text-lg">
-            Falta só um passo antes de você começar a planejar suas próximas
-            viagens: liberar seu acesso pelo e-mail.
+            Agora falta só seguir os passos abaixo para acessar tudo o que faz
+            parte do seu{" "}
+            <span className="text-[#2dd4bf]">Ciclo das Viagens Infinitas</span>.
           </p>
 
-          {/* Aviso principal: e-mail e spam */}
+          {/* Passo 1: e-mail */}
           <div className="mt-10 w-full rounded-2xl border-2 border-[#2dd4bf] bg-[#16292c] p-6 text-left shadow-[0_0_40px_rgba(45,212,191,0.12)] sm:p-8">
-            <div className="flex items-start gap-4">
-              <span className="text-3xl">📩</span>
-              <div>
-                <h2
-                  className={`${playfair.className} font-semibold text-[#2dd4bf] text-xl sm:text-2xl`}
-                >
-                  Olhe seu e-mail agora — inclusive o SPAM
-                </h2>
-                <p className="mt-2 text-[#e7e1d3]">
-                  Neste exato momento estamos enviando para o seu e-mail de
-                  cadastro os{" "}
-                  <strong className="text-[#f5efe4]">
-                    links de acesso ao Ciclo de Viagens Infinitas
-                  </strong>
-                  . Esse e-mail pode levar alguns minutos para chegar e, com
-                  frequência, cai direto na caixa de{" "}
-                  <strong className="text-[#f5efe4]">
-                    Spam, Lixo Eletrônico ou Promoções
-                  </strong>{" "}
-                  em vez da caixa de entrada.
+            <h2
+              className={`${playfair.className} font-semibold text-[#2dd4bf] text-xl sm:text-2xl`}
+            >
+              📩 1. Confira seu e-mail
+            </h2>
+
+            <p className="mt-3 text-[#e7e1d3]">Você receberá 2 e-mails:</p>
+
+            <div className="mt-4 space-y-3">
+              <div className="rounded-lg border border-[#2dd4bf]/20 bg-[#0d1b1e]/40 p-4">
+                <p className="font-semibold text-[#f5efe4]">Hubla</p>
+                <p className="mt-1 text-[#e7e1d3]">
+                  Acesso à sua Área de Membros.
+                </p>
+              </div>
+              <div className="rounded-lg border border-[#2dd4bf]/20 bg-[#0d1b1e]/40 p-4">
+                <p className="font-semibold text-[#f5efe4]">Cursos Educa</p>
+                <p className="mt-1 text-[#e7e1d3]">
+                  Acesso à plataforma onde estão as aulas.
                 </p>
               </div>
             </div>
 
-            <ol className="mt-6 space-y-4 border-[#2dd4bf]/30 border-t pt-6">
-              <li className="flex gap-3">
-                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#2dd4bf] font-semibold text-[#0d1b1e] text-sm">
-                  1
-                </span>
-                <span className="text-[#e7e1d3]">
-                  Abra a caixa de entrada do e-mail que você usou na compra.
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#2dd4bf] font-semibold text-[#0d1b1e] text-sm">
-                  2
-                </span>
-                <span className="text-[#e7e1d3]">
-                  Não encontrou? Verifique as pastas de{" "}
-                  <strong className="text-[#f5efe4]">
-                    Spam / Lixo Eletrônico
-                  </strong>{" "}
-                  e Promoções — é o lugar mais comum onde ele acaba caindo.
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#2dd4bf] font-semibold text-[#0d1b1e] text-sm">
-                  3
-                </span>
-                <span className="text-[#e7e1d3]">
-                  Ao encontrar o e-mail, marque como "não é spam" e clique no
-                  link de acesso para liberar seu conteúdo.
-                </span>
-              </li>
-            </ol>
+            <p className="mt-4 text-[#a89f8c] text-sm">
+              Não encontrou? Verifique também as pastas{" "}
+              <strong className="text-[#f5efe4]">
+                Spam, Promoções e Lixo Eletrônico
+              </strong>
+              .
+            </p>
           </div>
 
-          <p className="mt-6 text-[#a89f8c] text-sm">
-            Se depois de alguns minutos o e-mail ainda não aparecer, confira se
-            o endereço digitado na compra está correto antes de tentar
-            novamente.
-          </p>
+          {/* Passo 2: Área de membros */}
+          <div className="mt-6 w-full rounded-2xl border-2 border-[#2dd4bf] bg-[#16292c] p-6 text-left shadow-[0_0_40px_rgba(45,212,191,0.12)] sm:p-8">
+            <h2
+              className={`${playfair.className} font-semibold text-[#2dd4bf] text-xl sm:text-2xl`}
+            >
+              👥 2. Entre na Área de Membros da Hubla
+            </h2>
 
-          <p
-            className={`${playfair.className} mt-14 text-[#2dd4bf] text-lg italic`}
-          >
-            Obrigado por confiar no Ciclo de Viagens Infinitas.
-          </p>
-          <p className="mt-2 text-[#7c7666] text-xs">
-            Sua próxima viagem começa nesse e-mail.
-          </p>
+            <p className="mt-3 text-[#e7e1d3]">
+              Na Hubla você encontrará os links para entrar no:
+            </p>
+
+            <ul className="mt-3 space-y-2 text-[#e7e1d3]">
+              <li>✅ GOE (Grupo de Oportunidades Exclusivas)</li>
+              <li>✅ Grupo Oficial da Turma</li>
+            </ul>
+
+            <p className="mt-4 text-[#a89f8c] text-sm">
+              Esses grupos são onde enviamos avisos, atualizações e informações
+              importantes.
+            </p>
+          </div>
+
+          {/* Passo 3: aulas */}
+          <div className="mt-6 w-full rounded-2xl border-2 border-[#2dd4bf] bg-[#16292c] p-6 text-left shadow-[0_0_40px_rgba(45,212,191,0.12)] sm:p-8">
+            <h2
+              className={`${playfair.className} font-semibold text-[#2dd4bf] text-xl sm:text-2xl`}
+            >
+              🎓 3. Comece as aulas
+            </h2>
+
+            <p className="mt-3 text-[#e7e1d3]">
+              Utilize o acesso enviado pela Cursos Educa para entrar na
+              plataforma e assistir às aulas do{" "}
+              <strong className="text-[#f5efe4]">
+                Ciclo das Viagens Infinitas
+              </strong>
+              .
+            </p>
+          </div>
+
+          {/* Suporte */}
+          <div className="mt-10 text-center">
+            <p className={`${playfair.className} text-[#2dd4bf] text-lg`}>
+              💙 Precisa de ajuda?
+            </p>
+            <p className="mt-2 max-w-xl text-[#e7e1d3]">
+              Se tiver qualquer dificuldade para localizar seus acessos, fale
+              com nosso suporte:
+            </p>
+            <p className="mt-2 font-semibold text-[#f5efe4] text-lg">
+              📲 +55 51 3191-3156
+            </p>
+          </div>
         </main>
       </div>
     </div>
