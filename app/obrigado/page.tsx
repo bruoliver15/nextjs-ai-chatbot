@@ -119,9 +119,6 @@ export default function ObrigadoPage() {
               Se tiver qualquer dificuldade para localizar seus acessos, fale
               com nosso suporte:
             </p>
-            <p className="mt-2 font-semibold text-[#f5efe4] text-lg">
-              📲 +55 51 3191-3156
-            </p>
             <a
               className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#25d366] px-6 py-3 font-semibold text-[#0d1b1e] transition-opacity hover:opacity-90"
               href="https://wa.me/5131913156"
